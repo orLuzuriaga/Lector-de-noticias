@@ -28,3 +28,23 @@ Los datos básicos a recuperar serán:
 - content -> rendered
 - excerpt -> rendered
 - jetpack_featured_media_ur
+
+
+### Tabla Posts
+Se creará una tabla de contenido prototipo para mostrar las noticias recuperadas de los datos del
+servidor de Apple Coding.
+Se deberá incluir la capacidad de marcar como favorita una noticia y que se
+incluya en otra fuente. No se podrán borrar noticias ni recolocar.
+
+Cuando se pulsa en una celda se nos traslada a ver la noticia. Para ello hemos de usar una vista
+tipo WKWebView en el detalle. Arrastramos una ventana WebKit View desde los componentes
+hacia un ViewController, donde hemos de importar la librería WebKit porque si no dará error
+diciendo que no encuentra el tipo WKWebView.
+
+### Colección Favoritos 
+Se mostrará una vista de colección con las noticas marcadas como favoritas.
+
+
+### Pantalla Acerca de
+
+Se muestra un WKWebView donde se puede ver datos del desarrollador
