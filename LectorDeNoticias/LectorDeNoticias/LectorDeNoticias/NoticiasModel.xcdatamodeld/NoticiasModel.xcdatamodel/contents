@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AutorDB" representedClassName="AutorDB" syncable="YES" codeGenerationType="class">
+        <attribute name="iD" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="postAutor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PostsDB" inverseName="autorRelation" inverseEntity="PostsDB" syncable="YES"/>
+    </entity>
+    <entity name="CategoriaDB" representedClassName="CategoriaDB" syncable="YES" codeGenerationType="class">
+        <attribute name="iD" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="postCat" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PostsDB" inverseName="categRelation" inverseEntity="PostsDB" syncable="YES"/>
+    </entity>
+    <entity name="FavoritosDB" representedClassName="FavoritosDB" syncable="YES" codeGenerationType="class">
+        <attribute name="autor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatarImage" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="categoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="excerpt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iD" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="favNoticia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PostsDB" inverseName="favRelation" inverseEntity="PostsDB" syncable="YES"/>
+    </entity>
+    <entity name="PostsDB" representedClassName="PostsDB" syncable="YES" codeGenerationType="class">
+        <attribute name="autor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatarImage" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="categoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="excerpt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iD" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="autorRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AutorDB" inverseName="postAutor" inverseEntity="AutorDB" syncable="YES"/>
+        <relationship name="categRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoriaDB" inverseName="postCat" inverseEntity="CategoriaDB" syncable="YES"/>
+        <relationship name="favRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoritosDB" inverseName="favNoticia" inverseEntity="FavoritosDB" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AutorDB" positionX="-633.3359375" positionY="-242.12109375" width="128" height="88"/>
+        <element name="CategoriaDB" positionX="-608.76171875" positionY="248.8671875" width="128" height="88"/>
+        <element name="PostsDB" positionX="-1023.24609375" positionY="144.51953125" width="128" height="208"/>
+        <element name="FavoritosDB" positionX="-690.26171875" positionY="-0.97265625" width="128" height="163"/>
+    </elements>
+</model>
