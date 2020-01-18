@@ -10,7 +10,7 @@ La app constará de tres pestañas de forma obligatoria:
 - Acerca de
 
 
-Lectura de los datos
+###Lectura de los datos
 Se deberán leer los datos de un JSON y tratarlo con Codable para cargar en un struct (o varios)
 que sean capaces de entender y crear la estructura de los mismos.
 La fuente de los datos será la siguiente URL que será la fuente asíncrona de datos:
